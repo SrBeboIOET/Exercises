@@ -1,0 +1,1 @@
+este archivo sirve de ejemplo para contar la frecuencia de las palabras. 

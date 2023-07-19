@@ -23,6 +23,7 @@ def calculate_result(string):
             if token == '%':
                 result = operator1 % operator2
             stack.append(result)
+        
     return stack.pop()
 
 print("The result of: ", postfix, "is: ", calculate_result(postfix))

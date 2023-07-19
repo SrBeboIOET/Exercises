@@ -16,5 +16,6 @@ def balance(string):
 
 if balance(string):
     print("There is a balance")
+    
 if not balance(string):
     print("There is not a balance")

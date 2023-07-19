@@ -24,5 +24,3 @@ print("Value in kilometers to value in centimeters:\n", value_in_k_to_c)
 
 value_in_k_to_m = value*values['meters']/values['kilometers']
 print("Value in kilometers to value in meters:\n", value_in_k_to_m)
-
- 

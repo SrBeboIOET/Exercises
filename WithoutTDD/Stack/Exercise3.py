@@ -13,5 +13,4 @@ def reverse_string(string):
 
     return result_string
 
-
 print("\nThe reverse of: ", string, "is: \n", reverse_string(reverse))

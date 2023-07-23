@@ -1,7 +1,7 @@
 string = input("Enter a string of characteres: ")
 flag = True
 
-def balance(string):
+def is_balance_string(string):
     stack = []
     balances  = {'(': ')', '[': ']', '{': '}'}
 
@@ -11,11 +11,11 @@ def balance(string):
         if special_character in balances.values(): 
             if not stack or balances[stack.pop()] != special_character: 
                 return False
-
+            
     return len(stack) == 0
 
-if balance(string):
+if is_balance_string(string):
     print("There is a balance")
     
-if not balance(string):
+if not is_balance_string(string):
     print("There is not a balance")

@@ -22,9 +22,7 @@ def sort_queue(queue):
 
     return list(final_queue)
 
-
 values = input("Enter the values to add to the list with a separation using a space: ")
 queue = deque(map(int, values.split()))
-
 
 print("Sorted list:", sort_queue(queue))

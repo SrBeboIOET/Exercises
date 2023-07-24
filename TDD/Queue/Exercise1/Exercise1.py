@@ -1,0 +1,27 @@
+from collections import deque
+values= [8, 3, 2, 1]
+
+def sort_queue(queue): #function to sort the queue
+    if len(queue) <= 1: 
+        return queue 
+    
+    half = len(queue) // 2 
+    sublist1 = deque([queue[i] for i in range(half)]) 
+    sublist2 = deque([queue[i] for i in range(half, len(queue))]) 
+
+    queue1 = deque(sort_queue(sublist1)) 
+    queue2 = deque(sort_queue(sublist2)) 
+
+    final_queue = deque() # Merge the two sorted subqueues
+    while queue1 and queue2:   
+        if queue1[0] < queue2[0]:  
+            final_queue.append(queue1.popleft()) 
+        else:
+            final_queue.append(queue2.popleft())
+    final_queue.extend(queue1) 
+    final_queue.extend(queue2) 
+    return list(final_queue) 
+
+queue = deque(values) 
+
+print("Sorted list:", sort_queue(queue)) 
